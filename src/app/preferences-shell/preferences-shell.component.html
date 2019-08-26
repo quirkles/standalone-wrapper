@@ -1,0 +1,11 @@
+<h1>My Purchase UserOrgPreferences</h1>
+<app-buyer-org-select
+  [organizations]="organizations"
+  (orgSelected)="onOrgSelected($event)"
+></app-buyer-org-select>
+<div id="select-prompt" *ngIf="!selectedOrganizationId">Please select Organization</div>
+<div id = "fetch-prompt" *ngIf="selectedOrganizationId && !selectedOrganizationPreferences">Fetching</div>
+<app-preferences-wrapper
+  *ngIf="selectedOrganizationId && selectedOrganizationPreferences"
+  [preferencesFromServer]="selectedOrganizationPreferences"
+></app-preferences-wrapper>

@@ -1,0 +1,32 @@
+<span style="font-weight: bold">PAYMENT METHODS</span>
+<p>Rank your payment methods in order of priority</p>
+
+<div class="no-preferences" *ngIf="selectedPreferences && selectedPreferences.length == 0">
+  <a href="#">+ Select From Your Payment Method</a>
+</div>
+
+
+  <!-- <h4>Applicable UserOrgPreferences</h4>
+  <ul>
+    <li>
+      <div
+        *ngFor="let applicableAppPaymentMethod of applicablePreferences"
+      >
+        {{applicableAppPaymentMethod.name}}
+      </div>
+
+    </li>
+  </ul> -->
+
+<div class="selected-preferences" *ngIf="selectedPreferences && selectedPreferences.length > 0">
+    <ul>
+        <li>
+          <div class="payment-method" *ngFor="let selectedPaymentMethod of selectedPreferences; let i = index">
+              <span class="numberSquare">{{ i+1 }}</span>
+              <label>{{ selectedPaymentMethod.name }}</label>
+          </div>
+        </li>
+      </ul>
+</div>
+
+

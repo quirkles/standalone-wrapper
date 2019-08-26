@@ -1,0 +1,4 @@
+<app-dropdown
+  [options]="organizations | getDropdownOptions:'name':'id'"
+  (selectEvent)="onOrgSelected($event)"
+></app-dropdown>

@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col payment-method">
+      <app-payment-method
+      [selectedPreferences]="preferencesFromServer.selectedPreferences.paymentMethodPrefs"
+      [applicablePreferences]="preferencesFromServer.applicablePreferences.paymentMethodPrefs"
+    ></app-payment-method>
+  </div>
+  <div class="col transport-service">
+      <app-transport-service
+      [selectedPreferences]="preferencesFromServer.selectedPreferences.transportPrefs"
+      [applicablePreferences]="preferencesFromServer.applicablePreferences.transportPrefs"
+    ></app-transport-service>
+  </div>
+  <div class="col guarantee-option">
+      <app-buy-back-guarantee-option></app-buy-back-guarantee-option>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8 physical-auction">
+      <span style="font-weight: bold">VEHICLES AT PHYSICAL AUCTION</span>
+  </div>
+  <div class="col-4 offsite-vehicles">
+      <span style="font-weight: bold">OFF-SITE VEHICLES</span>
+  </div>
+</div>

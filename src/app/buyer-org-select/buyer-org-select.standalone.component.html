@@ -1,0 +1,9 @@
+<app-standalone-wrapper
+  [controller]="controller"
+  (mountComponentClicked)="onMountComponentClicked($event)"
+>
+  <app-buyer-org-select
+    [organizations]="organizations"
+    #targetComponent
+  ></app-buyer-org-select>
+</app-standalone-wrapper>
